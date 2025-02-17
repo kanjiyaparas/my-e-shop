@@ -51,12 +51,12 @@ const validator = {
 }
 
 router.route('/')
-  .post(validator.addOrderItems, validateRequest, protect, addOrderItems)
-  .get(protect, admin, getOrders);
+  .post(validator.addOrderItems, validateRequest, addOrderItems)
+  .get(admin, getOrders);
 
 router.get('/my-orders', getMyOrders);
-router.get('/:id', validator.getOrderById, validateRequest, protect, getOrderById);
-router.put('/:id/pay', validator.updateOrderToPaid, validateRequest, protect, updateOrderToPaid);
-router.put('/:id/deliver', validator.updateOrderToDeliver, validateRequest, protect, admin, updateOrderToDeliver);
+router.get('/:id', validator.getOrderById, validateRequest, getOrderById);
+router.put('/:id/pay', validator.updateOrderToPaid, validateRequest, updateOrderToPaid);
+router.put('/:id/deliver', validator.updateOrderToDeliver, validateRequest,admin, updateOrderToDeliver);
 
 export default router;
