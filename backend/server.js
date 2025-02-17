@@ -22,7 +22,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: {"https://my-e-shop.onrender.com","https://my-e-shop-pearl.vercel.app/"} 
+  origin: {"https://my-e-shop.onrender.com","https://my-e-shop-pearl.vercel.app"} 
   credentials: true, 
 }));
 app.use(compression());
