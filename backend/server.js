@@ -22,7 +22,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://my-e-shop-pearl.vercel.app', 
   credentials: true, 
 }));
 app.use(compression());
